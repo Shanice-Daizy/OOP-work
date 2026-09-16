@@ -1,5 +1,5 @@
-def get_grade(self):
-    average = self.calculate_average()
+def get_grade(self):#defines the get_grade method for the student instance
+    average = self.calculate_average()#calculates the average
 
     if average >= 80:
         return "A"
@@ -11,3 +11,4 @@ def get_grade(self):
         return "D"
     else:
         return "F"
+        #determines the grade based on average
