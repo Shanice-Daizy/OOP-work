@@ -1,26 +1,4 @@
-class Student:
-    def __init__(self, name, registration_number):
-        self.name = name
-        self.registration_number = registration_number
-        self.marks = []
-
-    def add_mark(self, mark):
-        # Only accept marks between 0 and 100
-        if mark >= 0 and mark <= 100:
-            self.marks.append(mark)
-            print(mark, "has been added successfully.")
-        else:
-            print("Invalid mark. Mark must be between 0 and 100.")
-
-    def calculate_average(self):
-        # Avoid division by zero if no marks have been added
-        if len(self.marks) == 0:
-            return 0
-
-        total = sum(self.marks)
-        average = total / len(self.marks)
-
-        return average
+from student import Student
 
 
 # Testing the Student class

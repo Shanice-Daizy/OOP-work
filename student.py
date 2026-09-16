@@ -14,25 +14,37 @@ class Student:
         self.marks = []
 
     def add_mark(self, mark):
-        # Member 2
-        self.marks.append(mark)
+        if 0 <= mark <= 100:
+            self.marks.append(mark)
+            print(mark, "has been added successfully.")
+        else:
+            print("Invalid mark. Mark must be between 0 and 100.")
 
     def calculate_average(self):
-        # Member 3
-        pass
+        if not self.marks:
+            return 0
+
+        return sum(self.marks) / len(self.marks)
 
     def get_grade(self):
-        # Member 4
-        pass
+        average = self.calculate_average()
+        if average >= 70:
+            return "A"
+        if average >= 60:
+            return "B"
+        if average >= 50:
+            return "C"
+        if average >= 40:
+            return "D"
+        return "F"
 
     def has_passed(self):
-        # Member 5
-        pass
+        return self.calculate_average() >= 40
 
     def display_results(self):
-        # Member 6
-        pass
-
-
-# SHORT DEMONSTRATION
-# Objects will be created here after the class is completed.
+        print("Name:", self.name)
+        print("Registration number:", self.registration_number)
+        print("Marks:", self.marks)
+        print("Average:", self.calculate_average())
+        print("Grade:", self.get_grade())
+        print("Passed:", self.has_passed())
