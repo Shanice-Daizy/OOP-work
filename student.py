@@ -1,42 +1,6 @@
-class Student:
-    def __init__(self, name, reg_no):
-        self.name = name
-        self.reg_no = reg_no
-        self.marks = []
-
-    def add_mark(self, mark):
-        if 0 <= mark <= 100:
-            self.marks.append(mark)
-            print(mark, "has been added successfully.")
-        else:
-            print("Invalid mark. Mark must be between 0 and 100.")
-
-    def calculate_average(self):
-        if len(self.marks) == 0:
-            return 0
-
-        total = sum(self.marks)
-        average = total / len(self.marks)
-
-        return average
-
-    def get_grade(self):
-        average = self.calculate_average()
-
-        if average >= 80:
-            return "A"
-        elif average >= 70:
-            return "B"
-        elif average >= 60:
-            return "C"
-        elif average >= 50:
-            return "D"
-        else:
-            return "F"
-
-    # A student passes only if the average is at least 50 and
+ # A student passes only if the average is at least 50 and
     # every individual mark is at least 40.
-    def has_passed(self):
+def has_passed(self):
         average = self.calculate_average()
 
         if average < 50:
@@ -46,16 +10,4 @@ class Student:
             if mark < 40:
                 return False
 
-        return True
-
-    def display_results(self):
-        print("Name:", self.name)
-        print("Registration Number:", self.reg_no)
-        print("Marks:", self.marks)
-        print("Average:", self.calculate_average())
-        print("Grade:", self.get_grade())
-
-        if self.has_passed():
-            print("Status: PASSED")
-        else:
-            print("Status: FAILED")
+        return True    
