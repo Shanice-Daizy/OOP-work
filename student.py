@@ -47,3 +47,15 @@ class Student:
                 return False
 
         return True
+
+    def display_results(self):
+        print("Name:", self.name)
+        print("Registration Number:", self.reg_no)
+        print("Marks:", self.marks)
+        print("Average:", self.calculate_average())
+        print("Grade:", self.get_grade())
+
+        if self.has_passed():
+            print("Status: PASSED")
+        else:
+            print("Status: FAILED")
