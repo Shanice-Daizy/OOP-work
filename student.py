@@ -1,38 +1,50 @@
-# Group Members:
-# 1. Member Name
-# 2. Member Name
-# 3. Member Name
-# 4. Member Name
-# 5. Member Name
-# 6. Member Name
 
 
-class Student:
-    def __init__(self, name, registration_number):
-        self.name = name
-        self.registration_number = registration_number
-        self.marks = []
-
-    def add_mark(self, mark):
-        # Member 2
-        self.marks.append(mark)
-
-    def calculate_average(self):
-        # Member 3
-        pass
-
-    def get_grade(self):
-        # Member 4
-        pass
-
-    def has_passed(self):
-        # Member 5
-        pass
 
     def display_results(self):
-        # Member 6
-        pass
+        print("Name:", self.name)
+        print("Registration Number:", self.registration_number)
+        print("Marks:", self.marks)
+        print("Average:", self.calculate_average())
+        print("Grade:", self.get_grade())
+
+        if self.has_passed():
+            print("Status: PASSED")
+        else:
+            print("Status: FAILED")
 
 
-# SHORT DEMONSTRATION
-# Objects will be created here after the class is completed.
+# DEMONSTRATION
+
+student1 = Student("Alex", "S24B23/001")
+
+student1.add_mark(80)
+student1.add_mark(75)
+student1.add_mark(65)
+
+
+student2 = Student("Mary", "S24B23/002")
+
+student2.add_mark(90)
+student2.add_mark(70)
+student2.add_mark(35)
+
+# Invalid action - this mark must be refused
+student2.add_mark(120)
+
+
+print("\nSTUDENT 1 RESULTS")
+student1.display_results()
+
+print("\nSTUDENT 2 RESULTS")
+student2.display_results() 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
