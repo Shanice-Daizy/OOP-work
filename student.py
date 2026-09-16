@@ -11,6 +11,15 @@ class Student:
         else:
             print("Invalid mark. Mark must be between 0 and 100.")
 
+    def calculate_average(self):
+        if len(self.marks) == 0:
+            return 0
+
+        total = sum(self.marks)
+        average = total / len(self.marks)
+
+        return average
+
     # A student passes only if the average is at least 50 and
     # every individual mark is at least 40.
     def has_passed(self):
